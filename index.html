@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Follower Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .content {
+            margin-top: 30px;
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"], button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #218838;
+        }
+        .log {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instagram Follower Manager</h1>
+    <div class="content">
+        <p>Follow Log in: {{ active_accounts_count }}</p>
+        
+        <form action="/" method="post">
+            <input type="text" name="target_username" placeholder="Enter Target Username" required>
+            <button type="submit">Add Followers</button>
+        </form>
+
+        <div class="log">
+            <p>{{ message }}</p>
+        </div>
+    </div>
+</body>
+</html>
